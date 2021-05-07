@@ -19,13 +19,14 @@ class _LoginState extends State<Login> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+
                 Text('Login', 
-                style: TextStyle(
-                  color: Colors.white, 
-                  fontSize: 35.0, 
-                  fontWeight: FontWeight.bold  
+                  style: TextStyle(
+                    color: Colors.white, 
+                    fontSize: 35.0, 
+                    fontWeight: FontWeight.bold  
+                    ),
                   ),
-                ),
 
                 Text('Welcome to your account',
                   style: TextStyle(
