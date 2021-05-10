@@ -142,7 +142,7 @@ class _LoginState extends State<Login> {
                           Color(0xff132144)
                         )
                       ),
-                      onPressed: (){}, 
+                      onPressed: () => Navigator.pushNamed(context, 'home'), 
                       child: Text('Login', 
                         style: TextStyle(
                           color: Colors.white,
