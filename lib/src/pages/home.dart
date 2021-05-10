@@ -6,25 +6,99 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _body(),
+      body: _body(context),
     );
   }
 
-  Widget _body() {
+  Widget _body(BuildContext context) {
 
     return Column(
-
       children: [
         Container(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Text('Company name'),
-                  Icon(MdiIcons.viewGridOutline)
-                ],
-              )
-            ],
+          height: MediaQuery.of(context).size.height * 0.25,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xff079DF2),
+                Color(0xff57C2FF)
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight
+            )            
+          ),
+          child: SafeArea(
+            child: Column(
+              children: [
+
+                //children 1
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //children 1 row
+                      Text('Company name', style: 
+                        TextStyle(
+                          color: Colors.white,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.bold
+                        ), ),
+                        //children 2 row
+                      Icon(MdiIcons.viewGridOutline, color: Colors.white, size: 30.0,)
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15.0,),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0,),
+                  child: Row(
+                    children: [
+
+                      //children 1
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
+                        padding: EdgeInsets.all(3.0),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                            'https://img2.freepng.es/20180623/iqh/kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c40ce333.6524068515297806760528.jpg'
+                          ),
+                        ),
+                      ),
+
+                      VerticalDivider(),
+                      
+                      //children 2
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+
+                          //children1
+                          Text('Hello Carlitos', style: 
+                            TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 23.0
+                            ),),
+
+                            //children 2
+                          Text('Welcome back', style: 
+                            TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.0
+                            ) )
+                            
+                        ],
+                      )
+
+                    ],
+                  ),
+                )
+
+              ],
+            ),
           ),
         )
       ],
