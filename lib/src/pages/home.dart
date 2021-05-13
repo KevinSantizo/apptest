@@ -76,7 +76,7 @@ class Home extends StatelessWidget {
                         children: [
 
                           //children1
-                          Text('Hello Carlitos', style: 
+                          Text('Hello Carlitoss', style: 
                             TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
