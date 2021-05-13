@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,11 +10,15 @@ class Home extends StatelessWidget {
   }
 
   Widget _body() {
-
     return Column(
-
       children: [
         Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomRight,
+                colors: []),
+          ),
           child: Column(
             children: [
               Row(
@@ -28,8 +31,6 @@ class Home extends StatelessWidget {
           ),
         )
       ],
-
     );
-
   }
 }
