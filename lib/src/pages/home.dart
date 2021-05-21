@@ -208,44 +208,135 @@ class Home extends StatelessWidget {
             ),
           ),
           Card(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 25.0),
               child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          CircleAvatar(),
+                          VerticalDivider(),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Barone LLC",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18.0),
+                              ),
+                              Text(
+                                "2715 Ash Dr. San Jose, South Dakota",
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      TextButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              Colors.red.withOpacity(0.3)),
+                        ),
+                        onPressed: () {},
+                        child: Text("Office",
+                            style: TextStyle(
+                              color: Colors.red,
+                            )),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 0.5,
+                    height: 20.0,
+                  ),
+                  Column(
+                    children: [
+                      Row(children: [
+                        Icon(Icons.access_time),
+                        VerticalDivider(),
+                        Text("15.00 - 17.00 (2 hours)"),
+                      ]),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.attach_money_outlined),
+                          VerticalDivider(),
+                          Text("34")
+                        ],
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 25.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  ),
                   Row(
                     children: [
                       CircleAvatar(),
                       VerticalDivider(),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Barone LLC",
+                            "BigKahuna",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 18.0),
                           ),
-                          Text(
-                            "2715 Ash Dr. San Jose, South Dakota",
-                          ),
+                          Text("2972 Westheimer RD, SantaAna, Illinois"),
                         ],
                       ),
+                      TextButton(
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Colors.orange.withOpacity((0.3)))),
+                          onPressed: () {},
+                          child: Text(
+                            "Apartment",
+                            style: TextStyle(color: Colors.orange),
+                          ))
                     ],
                   ),
-                  TextButton(
-                    style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                Colors.red.withOpacity(0.3)),
-                    ),
-                      onPressed: () {},
-                      child: Text(
-                        "Office",
-                        style: TextStyle(color: Colors.red,
-                      )),
-              
-              ),
+                  Divider(
+                    thickness: 0.5,
+                    height: 20.0,
+                  ),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.access_time_outlined),
+                          VerticalDivider(),
+                          Text("15.00 - 17.00 (2 hours)"),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.attach_money_outlined),
+                          VerticalDivider(),
+                          Text("234")
+                        ],
+                      )
+                    ],
+                  )
                 ],
-            ],
-          )),
+              ),
+            ),
+          ),
         ],
       ),
     );
