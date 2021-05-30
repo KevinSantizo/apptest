@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:testapp/src/components/card_component.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -140,148 +141,32 @@ class Home extends StatelessWidget {
             context: context,
             child: ListView(
               children: [
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15.0, vertical: 25.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                CircleAvatar(),
-                                VerticalDivider(),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Binford",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                    Text("1901 Thornridge Cir, Shilo, Hawai"),
-                                  ],
-                                )
-                              ],
-                            ),
-                            TextButton(
-                                style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all(
-                                      Colors.green.withOpacity(0.3)),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  "Flat",
-                                  style: TextStyle(color: Colors.green),
-                                )),
-                          ],
-                        ),
-                        Divider(
-                          thickness: 0.5,
-                          height: 20.0,
-                        ),
-                        Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(Icons.access_time),
-                                    VerticalDivider(),
-                                    Text("12.00 - 17.00 (5 hours)"),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 15.0,
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(Icons.attach_money_outlined),
-                                    VerticalDivider(),
-                                    Text("173"),
-                                  ],
-                                ),
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
+
+                CardComponent(
+                  avatar: 'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
+                  title: 'Binford',
+                  subtitle: "1901 Thornridge Cir, Shilo, Hawai",
+                  stringButton: "Flat",
+                  price: "173",
+                  time: "12.00 - 17.00 (5 hours)",
+                  buttonColor: Colors.green.withOpacity(0.3),
+                  stringButtonColor: Colors.green,
                 ),
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15.0, vertical: 25.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                CircleAvatar(),
-                                VerticalDivider(),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Barone LLC",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18.0),
-                                    ),
-                                    Text(
-                                      "2715 Ash Dr. San Jose, South Dakota",
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            TextButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Colors.red.withOpacity(0.3)),
-                              ),
-                              onPressed: () {},
-                              child: Text("Office",
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                  )),
-                            ),
-                          ],
-                        ),
-                        Divider(
-                          thickness: 0.5,
-                          height: 20.0,
-                        ),
-                        Column(
-                          children: [
-                            Row(children: [
-                              Icon(Icons.access_time),
-                              VerticalDivider(),
-                              Text("15.00 - 17.00 (2 hours)"),
-                            ]),
-                            SizedBox(
-                              height: 15.0,
-                            ),
-                            Row(
-                              children: [
-                                Icon(Icons.attach_money_outlined),
-                                VerticalDivider(),
-                                Text("34")
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+
+                CardComponent(
+                  avatar: 'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
+                  title: "Barone LLC", 
+                  subtitle: "2715 Ash Dr. San Jose, South Dakota", 
+                  buttonColor: Colors.red.withOpacity(0.3), 
+                  stringButton: "Office", 
+                  time: "15.00 - 17.00 (2 hours)", 
+                  price: "34",
+                  stringButtonColor: Colors.red,
                 ),
+
+                
+
+
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
