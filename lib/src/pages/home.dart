@@ -141,9 +141,9 @@ class Home extends StatelessWidget {
             context: context,
             child: ListView(
               children: [
-
                 CardComponent(
-                  avatar: 'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
+                  avatar:
+                      'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
                   title: 'Binford',
                   subtitle: "1901 Thornridge Cir, Shilo, Hawai",
                   stringButton: "Flat",
@@ -152,149 +152,43 @@ class Home extends StatelessWidget {
                   buttonColor: Colors.green.withOpacity(0.3),
                   stringButtonColor: Colors.green,
                 ),
-
                 CardComponent(
-                  avatar: 'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
-                  title: "Barone LLC", 
-                  subtitle: "2715 Ash Dr. San Jose, South Dakota", 
-                  buttonColor: Colors.red.withOpacity(0.3), 
-                  stringButton: "Office", 
-                  time: "15.00 - 17.00 (2 hours)", 
+                  avatar:
+                      'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
+                  title: "Barone LLC",
+                  subtitle: "2715 Ash Dr. San Jose, South Dakota",
+                  buttonColor: Colors.red.withOpacity(0.3),
+                  stringButton: "Office",
+                  time: "15.00 - 17.00 (2 hours)",
                   price: "34",
                   stringButtonColor: Colors.red,
                 ),
-
-                
-
-
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0, vertical: 25.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        ),
-                        Row(
-                          children: [
-                            CircleAvatar(),
-                            VerticalDivider(),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "BigKahuna",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18.0),
-                                ),
-                                Text("2972 Westheimer RD, SantaAna, Illinois"),
-                              ],
-                            ),
-                            TextButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        Colors.orange.withOpacity((0.3)))),
-                                onPressed: () {},
-                                child: Text(
-                                  "Apartment",
-                                  style: TextStyle(color: Colors.orange),
-                                ))
-                          ],
-                        ),
-                        Divider(
-                          thickness: 0.5,
-                          height: 20.0,
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Icon(Icons.access_time_outlined),
-                                VerticalDivider(),
-                                Text("15.00 - 17.00 (2 hours)"),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Icon(Icons.attach_money_outlined),
-                                VerticalDivider(),
-                                Text("234")
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
+                CardComponent(
+                  avatar:
+                      'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
+                  title: "BigKahuna",
+                  subtitle: "2972 Westhimer RD, SantaAna, \n Illinois",
+                  buttonColor: Colors.orange.withOpacity(0.3),
+                  stringButton: "Apartment",
+                  time: "15.00 - 17.00 (2 hours)",
+                  price: "234",
+                  stringButtonColor: Colors.orange,
                 ),
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0, vertical: 25.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        ),
-                        Row(
-                          children: [
-                            CircleAvatar(),
-                            VerticalDivider(),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "BigKahuna",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18.0),
-                                ),
-                                Text("2972 Westheimer RD, SantaAna, Illinois"),
-                              ],
-                            ),
-                            TextButton(
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        Colors.orange.withOpacity((0.3)))),
-                                onPressed: () {},
-                                child: Text(
-                                  "Apartment",
-                                  style: TextStyle(color: Colors.orange),
-                                ))
-                          ],
-                        ),
-                        Divider(
-                          thickness: 0.5,
-                          height: 20.0,
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Icon(Icons.access_time_outlined),
-                                VerticalDivider(),
-                                Text("15.00 - 17.00 (2 hours)"),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Icon(Icons.attach_money_outlined),
-                                VerticalDivider(),
-                                Text("234")
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
+                CardComponent(
+                  avatar:
+                      'https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg',
+                  title: "Barone LLC",
+                  subtitle: "2715 Ash Dr. San Jose, South Dakota",
+                  buttonColor: Colors.red.withOpacity(0.3),
+                  stringButton: "Office",
+                  time: "15.00 - 17.00 (2 hours)",
+                  price: "34",
+                  stringButtonColor: Colors.red,
                 ),
               ],
             ),
           ),
-        )
+        ),
       ],
     );
   }

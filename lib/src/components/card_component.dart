@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 
 class CardComponent extends StatelessWidget {
-
   final String avatar;
   final String title;
   final String subtitle;
-  final Color  buttonColor;
-  final Color  stringButtonColor;
+  final Color buttonColor;
+  final Color stringButtonColor;
   final String stringButton;
   final String time;
   final String price;
 
-  const CardComponent({
-    Key key, 
-    @required this.avatar, 
-    @required this.title, 
-    @required this.subtitle, 
-    @required this.buttonColor, 
-    @required this.stringButton, 
-    @required this.time, 
-    @required this.price, 
-    @required this.stringButtonColor
-  }) : super(key: key);
+  const CardComponent(
+      {Key key,
+      @required this.avatar,
+      @required this.title,
+      @required this.subtitle,
+      @required this.buttonColor,
+      @required this.stringButton,
+      @required this.time,
+      @required this.price,
+      @required this.stringButtonColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class CardComponent extends StatelessWidget {
                 Row(
                   children: [
                     CircleAvatar(
-                      backgroundImage: NetworkImage( avatar ),
+                      backgroundImage: NetworkImage(avatar),
                     ),
                     VerticalDivider(),
                     Column(
@@ -45,22 +44,27 @@ class CardComponent extends StatelessWidget {
                         Text(
                           title ?? '',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        Text(subtitle ?? ''),
+                        Text(
+                          subtitle ?? '',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: false,
+                        ),
                       ],
                     )
                   ],
                 ),
                 TextButton(
-                  style: ButtonStyle( backgroundColor: MaterialStateProperty.all( buttonColor ), ),
-                  onPressed: () {},
-                  child: Text(
-                    stringButton ?? '',
-                    style: TextStyle(color: stringButtonColor),
-                  )
-                ),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(buttonColor),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      stringButton ?? '',
+                      style: TextStyle(color: stringButtonColor),
+                    )),
               ],
             ),
             Divider(
@@ -79,7 +83,9 @@ class CardComponent extends StatelessWidget {
                         Text(time ?? ''),
                       ],
                     ),
-                    SizedBox( height: 15.0, ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
                     Row(
                       children: [
                         Icon(Icons.attach_money_outlined),
